@@ -1,0 +1,7 @@
+version: '3'
+services:
+  japenko-game:
+    image: japenko-game
+    container_name: japenko-game-container
+    ports:
+      - "8080:8080"

@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="view.GameScreen_GUI">
+  <grid id="27dc6" binding="MainPanel" layout-manager="BorderLayout" hgap="0" vgap="0">
+    <constraints>
+      <xy x="20" y="20" width="1000" height="1044"/>
+    </constraints>
+    <properties/>
+    <border type="none"/>
+    <children>
+      <grid id="e2388" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+        <constraints border-constraint="North"/>
+        <properties>
+          <background color="-8139797"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <component id="9bc0" class="javax.swing.JLabel" binding="CurrentRound">
+            <constraints/>
+            <properties>
+              <background color="-1"/>
+              <foreground color="-16777216"/>
+              <text value="currnet_round"/>
+            </properties>
+          </component>
+          <component id="6bbd4" class="javax.swing.JLabel" binding="ElapsedTime">
+            <constraints/>
+            <properties>
+              <background color="-1"/>
+              <foreground color="-16777216"/>
+              <text value="elapsed_time"/>
+            </properties>
+          </component>
+          <component id="7d014" class="javax.swing.JButton" binding="MenuButton">
+            <constraints/>
+            <properties>
+              <background color="-1"/>
+              <foreground color="-16777216"/>
+              <text value=" Menu "/>
+            </properties>
+          </component>
+          <component id="33d" class="javax.swing.JButton" binding="FinishButton">
+            <constraints/>
+            <properties>
+              <background color="-1"/>
+              <foreground color="-16777216"/>
+              <text value="Finish round"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+      <grid id="8f2b" layout-manager="GridBagLayout">
+        <constraints border-constraint="Center"/>
+        <properties>
+          <background color="-4069899"/>
+          <minimumSize width="500" height="500"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <grid id="4771f" binding="Player3StatusPanel" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+            <constraints>
+              <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+              <gridbag weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <background color="-4921950"/>
+            </properties>
+            <border type="none"/>
+            <children>
+              <component id="3f8d0" class="javax.swing.JTextField" binding="player3TextField" default-binding="true">
+                <constraints/>
+                <properties>
+                  <background color="-4921950"/>
+                  <editable value="false"/>
+                  <font name="Courier New" size="16"/>
+                  <foreground color="-16777216"/>
+                  <text value="player 3"/>
+                </properties>
+              </component>
+              <component id="6d456" class="javax.swing.JLabel" binding="Player3Image">
+                <constraints/>
+                <properties>
+                  <background color="-4921950"/>
+                  <foreground color="-16777216"/>
+                  <text value=""/>
+                </properties>
+              </component>
+              <grid id="a690b" binding="Player3Status" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="0">
+                <constraints/>
+                <properties>
+                  <background color="-4921950"/>
+                </properties>
+                <border type="none"/>
+                <children>
+                  <component id="f60db" class="javax.swing.JLabel" binding="Player3Ghost">
+                    <constraints/>
+                    <properties>
+                      <text value=""/>
+                    </properties>
+                  </component>
+                  <component id="320c7" class="javax.swing.JLabel" binding="Player3RollerSkate">
+                    <constraints/>
+                    <properties>
+                      <text value=""/>
+                    </properties>
+                  </component>
+                  <component id="34599" class="javax.swing.JLabel" binding="Player3Obstacle">
+                    <constraints/>
+                    <properties>
+                      <text value=""/>
+                    </properties>
+                  </component>
+                  <component id="e445a" class="javax.swing.JLabel" binding="Player3Detonator">
+                    <constraints/>
+                    <properties>
+                      <text value=""/>
+                    </properties>
+                  </component>
+                  <component id="bc01a" class="javax.swing.JLabel" binding="Player3Invincibility">
+                    <constraints/>
+                    <properties>
+                      <text value=""/>
+                    </properties>
+                  </component>
+                </children>
+              </grid>
+            </children>
+          </grid>
+          <grid id="e293" binding="GameBoard" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="0"/>
+            <constraints>
+              <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+              <gridbag weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties/>
+            <border type="none"/>
+            <children/>
+          </grid>
+          <grid id="33948" binding="Player1StatusPanel" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+              <gridbag weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <background color="-604499"/>
+            </properties>
+            <border type="none">
+              <title-color color="-16777216"/>
+            </border>
+            <children>
+              <component id="fbde0" class="javax.swing.JTextField" binding="player1TextField" default-binding="true">
+                <constraints/>
+                <properties>
+                  <background color="-604499"/>
+                  <editable value="false"/>
+                  <font name="Courier New" size="16"/>
+                  <foreground color="-16777216"/>
+                  <text value="player 1"/>
+                </properties>
+              </component>
+              <component id="5cbec" class="javax.swing.JLabel" binding="Player1Image">
+                <constraints/>
+                <properties>
+                  <background color="-604499"/>
+                  <foreground color="-16777216"/>
+                  <text value=""/>
+                </properties>
+              </component>
+              <grid id="1096c" binding="Player1Status" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="0">
+                <constraints/>
+                <properties>
+                  <background color="-604499"/>
+                </properties>
+                <border type="none"/>
+                <children>
+                  <component id="349c5" class="javax.swing.JLabel" binding="Player1Ghost">
+                    <constraints/>
+                    <properties>
+                      <text value=""/>
+                    </properties>
+                  </component>
+                  <component id="b6329" class="javax.swing.JLabel" binding="Player1RollerSkate">
+                    <constraints/>
+                    <properties>
+                      <text value=""/>
+                    </properties>
+                  </component>
+                  <component id="c3c33" class="javax.swing.JLabel" binding="Player1Obstacle">
+                    <constraints/>
+                    <properties>
+                      <text value=""/>
+                    </properties>
+                  </component>
+                  <component id="2874c" class="javax.swing.JLabel" binding="Player1Detonator">
+                    <constraints/>
+                    <properties>
+                      <text value=""/>
+                    </properties>
+                  </component>
+                  <component id="2682c" class="javax.swing.JLabel" binding="Player1Invincibility">
+                    <constraints/>
+                    <properties>
+                      <text value=""/>
+                    </properties>
+                  </component>
+                </children>
+              </grid>
+            </children>
+          </grid>
+          <grid id="dda6" binding="Player2StatusPanel" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+            <constraints>
+              <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+              <gridbag weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <background color="-1728803"/>
+            </properties>
+            <border type="none"/>
+            <children>
+              <component id="9153c" class="javax.swing.JTextField" binding="player2TextField" default-binding="true">
+                <constraints/>
+                <properties>
+                  <background color="-1728803"/>
+                  <editable value="false"/>
+                  <font name="Courier New" size="16"/>
+                  <foreground color="-16777216"/>
+                  <text value="player 2"/>
+                </properties>
+              </component>
+              <component id="afd85" class="javax.swing.JLabel" binding="Player2Image">
+                <constraints/>
+                <properties>
+                  <background color="-1728803"/>
+                  <foreground color="-16777216"/>
+                  <text value=""/>
+                </properties>
+              </component>
+              <grid id="96efc" binding="Player2Status" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="0">
+                <constraints/>
+                <properties>
+                  <background color="-1728803"/>
+                </properties>
+                <border type="none"/>
+                <children>
+                  <component id="fd8f2" class="javax.swing.JLabel" binding="Player2Ghost">
+                    <constraints/>
+                    <properties>
+                      <text value=""/>
+                    </properties>
+                  </component>
+                  <component id="67cc9" class="javax.swing.JLabel" binding="Player2RollerSkate">
+                    <constraints/>
+                    <properties>
+                      <text value=""/>
+                    </properties>
+                  </component>
+                  <component id="d0e5b" class="javax.swing.JLabel" binding="Player2Obstacle">
+                    <constraints/>
+                    <properties>
+                      <text value=""/>
+                    </properties>
+                  </component>
+                  <component id="52a6d" class="javax.swing.JLabel" binding="Player2Detonator">
+                    <constraints/>
+                    <properties>
+                      <text value=""/>
+                    </properties>
+                  </component>
+                  <component id="855dd" class="javax.swing.JLabel" binding="Player2Invincibility">
+                    <constraints/>
+                    <properties>
+                      <text value=""/>
+                    </properties>
+                  </component>
+                </children>
+              </grid>
+            </children>
+          </grid>
+        </children>
+      </grid>
+    </children>
+  </grid>
+</form>

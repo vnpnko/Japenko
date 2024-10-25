@@ -1,0 +1,55 @@
+stages:
+    - build
+    - test
+    - deploy
+
+variables:
+    # Define the base directory for Java classes to simplify commands
+    CLASSES_DIR: out
+
+build-my-first-job:
+    stage: build
+    image: ubuntu:22.04
+    script:
+        - echo "Updating packages and installing Java 22"
+        - apt-get update -y
+        - apt-get install -y wget
+        - wget https://download.java.net/java/GA/jdk22.0.1/c7ec1332f7bb44aeba2eb341ae18aca4/8/GPL/openjdk-22.0.1_linux-x64_bin.tar.gz
+        - tar xvf openjdk-22.0.1_linux-x64_bin.tar.gz
+        - export JAVA_HOME=$PWD/jdk-22.0.1
+        - export PATH=$JAVA_HOME/bin:$PATH
+        - java -version
+        - echo "Building the project"
+        - find src -name "*.java" > sources.txt
+        - javac -cp src -d $CLASSES_DIR @sources.txt
+    before_script:
+        - export CLASSES_DIR=out
+
+test-my-first-job:
+    stage: test
+    image: ubuntu:22.04
+    script:
+        - echo "Updating packages and installing Java 22"
+        - apt-get update -y
+        - apt-get install -y wget
+        - wget https://download.java.net/java/GA/jdk22.0.1/c7ec1332f7bb44aeba2eb341ae18aca4/8/GPL/openjdk-22.0.1_linux-x64_bin.tar.gz
+        - tar xvf openjdk-22.0.1_linux-x64_bin.tar.gz
+        - export JAVA_HOME=$PWD/jdk-22.0.1
+        - export PATH=$JAVA_HOME/bin:$PATH
+        - java -version
+        - echo "Downloading JUnit and dependencies"
+        - wget https://repo1.maven.org/maven2/org/junit/jupiter/junit-jupiter-api/5.7.0/junit-jupiter-api-5.7.0.jar
+        - wget https://repo1.maven.org/maven2/org/junit/jupiter/junit-jupiter-engine/5.7.0/junit-jupiter-engine-5.7.0.jar
+        - wget https://repo1.maven.org/maven2/org/junit/platform/junit-platform-console-standalone/1.7.0/junit-platform-console-standalone-1.7.0.jar
+        - wget https://repo1.maven.org/maven2/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar
+        - echo "Running tests"
+        - find test -name "*Test.java" > test_sources.txt
+        - javac -cp src:test:$CLASSES_DIR:junit-jupiter-api-5.7.0.jar:junit-jupiter-engine-5.7.0.jar:junit-platform-console-standalone-1.7.0.jar:apiguardian-api-1.1.0.jar -d $CLASSES_DIR @test_sources.txt
+        - java -cp $CLASSES_DIR:junit-jupiter-api-5.7.0.jar:junit-jupiter-engine-5.7.0.jar:junit-platform-console-standalone-1.7.0.jar:apiguardian-api-1.1.0.jar org.junit.platform.console.ConsoleLauncher --scan-classpath
+    before_script:
+        - export CLASSES_DIR=out
+
+deploy-my-first-job:
+    stage: deploy
+    script:
+        - echo "Deploying the application"

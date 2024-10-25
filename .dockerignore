@@ -1,0 +1,8 @@
+*.class
+*.jar
+*.log
+target/
+tmp/
+# Except myapp.jar
+!myapp.jar
+!Dockerfile
